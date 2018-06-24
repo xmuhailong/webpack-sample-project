@@ -39,6 +39,7 @@ class ImgFigure extends React.Component {
     constructor(props) {
         super(props);
 
+        // 类中函数，必须手动绑定
         this.handleClick = this.handleClick.bind(this);
     }
 
@@ -142,6 +143,7 @@ class GalleryByReactApp extends React.Component{
     constructor (props) {
         super(props);
 
+        // 设置 initial state
         this.state = {
             imgsArrangeArr: [
                 /*{
@@ -156,6 +158,7 @@ class GalleryByReactApp extends React.Component{
             ]
         }
 
+        // 定义类变量
         this.Constant = {
             centerPos: {
                 left: 0,

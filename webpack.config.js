@@ -78,7 +78,10 @@ module.exports = {
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 8192
+                            // byte为单位，小于8K的直接使用base64编码显示
+                            limit: 8192,
+                            // 指定编译后的图片名字：图片原来的名字-5位hash值.后缀
+                            name: '[name]-[hash:5].[ext]'
                         }
                     }
                 ]
