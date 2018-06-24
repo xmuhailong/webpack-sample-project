@@ -74,10 +74,14 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|woff|woff2|jpeg)$/,
-                use:
+                use:[
                     {
-                        loader: 'url-loader'
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192
+                        }
                     }
+                ]
             }
         ]
     },
