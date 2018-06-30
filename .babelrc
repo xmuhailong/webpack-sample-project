@@ -1,5 +1,5 @@
 {
-  "presets": ["react", "env"],
+  "presets": ["react", "es2015","env","stage-1", "latest"],
   "env": {
     "development": {
       "plugins": [["react-transform", {
@@ -10,7 +10,8 @@
 
           "locals": ["module"]
         }]
-      }]]
+      }],
+        ["transform-class-properties"]] // 在类中定义属性
     }
   }
 }
